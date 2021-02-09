@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <link rel='stylesheet' href='/styles/create_quiz.css' />
+        <div class="container">
+        <form action="/question" method="post" id="signup">
+            
+            <div class="header"><label for="quiz_name"><h3>Title of quiz:</h3> </label></div>
+            <div class="sep"></div>
+            <div class="inputs">
+            <input id="quiz_name" type="text" name="quiz_name" value="Tittle of the quiz">
+            <br>
+            <input id="submit" type="submit" value="Proceed">
+            <button id="submit" type="submit" formaction="/action_two">Homepage</button>
+            </div>
+        </form>
+        <p style="color:red;background-color:rgb(222, 223, 222);"><%=error%></p>
+        </div>
+    </body>
+</html>

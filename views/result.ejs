@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <link rel='stylesheet' href='/styles/result.css' />
+        <div class="container">
+        <table>
+            <%count=1%>
+            <%score=0%>
+            <thread>
+                <tr><th colspan="4"><H1 align="center">Result</H1></th></tr>
+            </thread>
+            <thread>
+            <tr><th>Sr.No</th></th><th>Correct Answer</th><th>Response</th><th>status</th></tr>
+            </thread>
+            <% data.forEach(function(data){ %>
+                <tr><td><%-count%></td>
+                    <%count+=1%>
+                     <td><%- data[0] ;%></td>
+                    <td><%- data[1] ;%></td>
+                    <% if(data[0]==data[1]){ %>
+                        <td> ✔</td>
+                        <%score+=1%>
+                      <% } else{ %>  
+                        <td>✕</td>
+                     <% } %>
+                </tr>
+               <%});%>
+            <tr><td colspan="3" align="center">Total score</td>
+                <td><%=score%></td>
+            </tr>
+        </table>
+        <form method="post">
+        <button type="submit" formaction="/action_two">Homepage</button>
+        </form>
+        </div>
+    </body>
+</html>
